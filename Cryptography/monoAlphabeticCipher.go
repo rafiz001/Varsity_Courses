@@ -40,9 +40,10 @@ func mac(text string) string {
 
 func task3() {
 	var input string
+	fmt.Println("Enter Text to be encrypted:")
 	fmt.Scanf("%s", &input)
 	encrypted := mac(input)
 	decrypted := mac(encrypted)
-	print("Encrypted: " + encrypted + "\n")
-	print("Decrypted: " + decrypted + "\n")
+	fmt.Println("Encrypted: " + encrypted)
+	fmt.Println("Decrypted: " + decrypted)
 }
