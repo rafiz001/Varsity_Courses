@@ -27,7 +27,7 @@ func mac(text string) string {
 			for k, v := range subTable {
 				if v == letter {
 					result += string(k)
-
+					break
 				}
 			}
 		}
