@@ -124,3 +124,39 @@ else:
 ```
 
 - e) Display all three images (Original image and 2 gray-level sliced images) with appropriate titles.
+---
+
+## Lab-8: Bit Plane Slicing and Image Reconstruction
+Write a Python program to perform the following tasks:
+- a) Read a grayscale image.
+- b) Apply bit plane slicing to extract all 8 bit planes (0–7) using the expression:
+```
+"bit_plane"_k = (img ">>" k) & 1
+[render this math from https://asciimath.org/]
+```
+- c) Store all the bit planes into an array.
+- d) Display all extracted bit planes in a 2 × 4 grid with appropriate titles (Bit Plane 0 to Bit Plane 7).
+- e) Reconstruct a new image using only the higher-order bit planes (bit planes 4–7) using the formula:
+```
+s = sum_(k=4)^7 "bit_plane"_k*2^k
+[render this math from https://asciimath.org/]
+```
+- f) Display both the original image and the reconstructed image with appropriate titles.
+---
+
+## Lab-9: Histogram Equalization
+Write a Python program to perform histogram equalization on a grayscale image using the following steps:
+- a) Compute frequency of each intensity level 
+- b) Calculate probability density function (PDF) 
+- c) Compute cumulative distribution function (CDF) 
+- d) Map old pixel values to new values
+
+## Lab-10: Image Smoothing
+
+Write a Python program to perform image smoothing using spatial filters:
+
+- a) Read a grayscale image
+- b) Use replicate padding (edge padding) to handle boundary pixels
+- c) Apply a 3×3 averaging filter to smooth the image
+- d) Apply a 3×3 median filter to smooth the image
+- e) Display the Original image, Averaging filter output, and Median filter output
