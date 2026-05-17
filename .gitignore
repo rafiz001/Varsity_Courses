@@ -1,1 +1,7 @@
 *.class
+*
+!*/
+!*.cpp
+!*.java
+!*.py
+!*.ipynb
