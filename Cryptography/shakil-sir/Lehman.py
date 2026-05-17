@@ -5,7 +5,13 @@ def lehman(p):
         a = random.randint(1,p-1)
         x = math.pow(a,(p-1)/2) % p
         if(x!=1 and x!=p-1):
-           return False
-    return True, (1-(1/math.pow(2,p-1))) *100
+           return False,False
+    return True, ((1/math.pow(2,p-1))) *100
 
-print(lehman(17))
+a = int(input("Enter Decimal to test: "))
+result,error = lehman(a)
+if(result==False):
+    print(f"{a} is not prime.")
+else:
+    print(f"{a} is prime with error {error}%")
+
