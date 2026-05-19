@@ -5,3 +5,6 @@
 !*.java
 !*.py
 !*.ipynb
+!*.bmp
+!*.tif
+!*.jpg
