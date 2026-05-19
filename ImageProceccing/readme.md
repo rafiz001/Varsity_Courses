@@ -160,3 +160,16 @@ Write a Python program to perform image smoothing using spatial filters:
 - c) Apply a 3×3 averaging filter to smooth the image
 - d) Apply a 3×3 median filter to smooth the image
 - e) Display the Original image, Averaging filter output, and Median filter output
+
+## Lab-11: Edge Detection and Image Sharpening
+
+Write a Python program to perform edge detection and image sharpening using spatial filters:
+- a) Read a grayscale image
+- b) Use replicate padding (edge padding) to handle boundary pixels
+- c) Apply a 3×3 Laplacian filter to extract the edge image
+- d) Generate a sharpened image using the Laplacian output
+- e) Display the following images: i) Original image, ii) Laplacian edge image, iii) Laplacian sharpened image
+- f) Apply the Sobel filter in the horizontal direction (Gx)
+- g) Apply the Sobel filter in the vertical direction (Gy)
+- h) Compute the gradient magnitude using the Sobel outputs
+- i) Display the following images: i) Sobel horizontal output (Gx), iii) Sobel vertical output (Gy), iii) Sobel gradient magnitude image
