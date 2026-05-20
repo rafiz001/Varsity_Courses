@@ -17,8 +17,6 @@ class PDFHandler(BaseHTTPRequestHandler):
         try:
             # Update this path to your PDF file location
             pdf_path = "/home/rafiz/Downloads/tmp/report-1778721537160.pdf"
-            # Get file size
-            file_size = os.path.getsize(pdf_path)
             # Set response headers
             self.send_response(200)
             self.send_header('Content-Type', 'application/pdf')
