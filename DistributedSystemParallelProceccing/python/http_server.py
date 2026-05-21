@@ -49,7 +49,7 @@ class PDFHandler(BaseHTTPRequestHandler):
         self.send_header('Content-Type', 'text/html')
         self.end_headers()
         self.wfile.write(html_response.encode())
-    def handle_html(self):
+    def handle_text(self):
         plain_text_response = "Hi, this is plain text, use /pdf or /html endpoints too."
         
         self.send_response(200)
