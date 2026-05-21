@@ -50,12 +50,12 @@ class PDFHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(html_response.encode())
     def handle_html(self):
-        html_response = "Hi, this is plain text, use /pdf or /html endpoints too."
+        plain_text_response = "Hi, this is plain text, use /pdf or /html endpoints too."
         
         self.send_response(200)
         self.send_header('Content-Type', 'text/plain')
         self.end_headers()
-        self.wfile.write(html_response.encode())
+        self.wfile.write(plain_text_response.encode())
 
 port = 8080
 server_address = ('', port)
