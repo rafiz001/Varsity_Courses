@@ -8,8 +8,7 @@ class RMIServer(RemoteInterface):
     def say_hello(self) -> str:
         return "Hello World!"
 
-
-with Pyro5.api.Daemon(port=5099) as daemon:
+with Pyro5.api.Daemon(host="localhost",port=5099) as daemon:
     try:
         ns = Pyro5.api.locate_ns()
         uri = daemon.register(RMIServer, "HelloService")
