@@ -8,6 +8,8 @@ class PDFHandler(BaseHTTPRequestHandler):
             self.handle_pdf()
         elif self.path == '/html':
             self.handle_html()
+        elif self.path == '/':
+            self.handle_text()
         else:
             self.send_response(404)
             self.end_headers()
@@ -45,6 +47,13 @@ class PDFHandler(BaseHTTPRequestHandler):
         
         self.send_response(200)
         self.send_header('Content-Type', 'text/html')
+        self.end_headers()
+        self.wfile.write(html_response.encode())
+    def handle_html(self):
+        html_response = "Hi, this is plain text, use /pdf or /html endpoints too."
+        
+        self.send_response(200)
+        self.send_header('Content-Type', 'text/plain')
         self.end_headers()
         self.wfile.write(html_response.encode())
 
