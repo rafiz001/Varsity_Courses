@@ -16,8 +16,9 @@ try:
 
         # Call the remote method.
         result = hello_service.say_hello()
+        calculated = hello_service.add(2,4)
 
-        print(f"Server says: {result}")
+        print(f"Server says: {result}\n2 and 4 makes {calculated}")
 
 except Exception as e:
     print(f"Error: {e}")

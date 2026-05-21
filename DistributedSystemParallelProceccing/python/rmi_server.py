@@ -1,5 +1,4 @@
 import Pyro5.api          # Core Pyro5 API: Daemon, expose, serve
-import Pyro5.nameserver   # For locating/starting the Name Server (like RMI Registry)
 from remote_interface import RemoteInterface
 
 
@@ -7,6 +6,8 @@ from remote_interface import RemoteInterface
 class RMIServer(RemoteInterface):
     def say_hello(self) -> str:
         return "Hello World!"
+    def add(self,a,b) -> int:
+        return a+b
 
 with Pyro5.api.Daemon(host="localhost",port=5099) as daemon:
     try:
